@@ -165,11 +165,6 @@
 
                     {% endfor %}
                 </div>
-                <div class="email-show">
-                    <div class="line"></div>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=codewithsmair@gmail.com" target="_blank"><p>codewithsmair@gmail.com</p></a>
-                    <div class="line"></div>
-                </div>
             </div>
 
 
@@ -382,7 +377,7 @@
 
         </section>
 
-        <section class="service-section" id="servicesection">
+        {% comment %} <section class="service-section" id="servicesection">
             <h2 class="title_text">my service <i class="fa-solid fa-greater-than"></i><i
                     class="fa-solid fa-greater-than"></i></h2>
                     
@@ -404,7 +399,7 @@
                         {% endfor %}
                     </div>
                     
-        </section>
+        </section> {% endcomment %}
 
         <section class="contatus-section" id="contactsection">
             <div class="contacts-container">
@@ -418,9 +413,9 @@
                     <a href="https://www.linkedin.com/in/samir-rain-0467b7259/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><button><i class="fa-brands fa-linkedin"></i> <span>LinkedIn</span></button></a>
 
                 </div>
-                <div class="contact-form-container">
+                {% comment %} <div class="contact-form-container">
                     <h2 class="title_text">contact us</h2>
-                    <form action="{% url "contact" %}" method="post">
+                    <form action="{% url 'contact' %}" method="post">
                         {% csrf_token %}
                         <div class="input-box">
                             <label for="name">Name</label>
@@ -437,8 +432,8 @@
                         <div class="input-box">
                             <button>submit</button>
                         </div>
-                    </form>
-                </div>
+                    </form> 
+                </div> {% endcomment %}
                 <div class="contact-us-image-box">
                     <!-- <img src="images/contact-us.png" alt=""> -->
                 </div>
